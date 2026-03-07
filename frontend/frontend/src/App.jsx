@@ -1,9 +1,11 @@
 
-
 function App() {
 
-  return (
 
+  return (
+      <p>
+            Welcome to my store
+      </p>
   )
 }
 

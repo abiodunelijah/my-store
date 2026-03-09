@@ -1,5 +1,7 @@
 package com.abiodunelijah.users;
 
+
+import com.abiodunelijah.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,21 +9,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cart {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    private Long orderId;
+    private LocalDate orderDate;
     private BigDecimal totalAmount;
 
-    @OneToOne
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
+
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
 }

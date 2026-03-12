@@ -1,5 +1,8 @@
 package com.abiodunelijah.users;
 
+import com.abiodunelijah.cart.Cart;
+import com.abiodunelijah.order.Order;
+import com.abiodunelijah.role.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +19,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "users")
 public class User {
 
     @Id

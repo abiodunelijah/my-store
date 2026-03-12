@@ -1,5 +1,6 @@
-package com.abiodunelijah.users;
+package com.abiodunelijah.role;
 
+import com.abiodunelijah.users.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +15,7 @@ import java.util.HashSet;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "roles")
 public class Role {
 
     @Id

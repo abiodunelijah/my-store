@@ -1,5 +1,6 @@
-package com.abiodunelijah.entities;
+package com.abiodunelijah.category;
 
+import com.abiodunelijah.product.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +14,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "categories")
 public class Category {
 
     @Id
@@ -20,6 +22,6 @@ public class Category {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "category ")
+    @OneToMany(mappedBy = "category")
     private List<Product> products;
 }

@@ -1,7 +1,8 @@
-package com.abiodunelijah.users;
+package com.abiodunelijah.order;
 
 
 import com.abiodunelijah.enums.OrderStatus;
+import com.abiodunelijah.users.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "orders")
 public class Order {
 
     @Id

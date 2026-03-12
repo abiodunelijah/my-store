@@ -1,5 +1,7 @@
-package com.abiodunelijah.entities;
+package com.abiodunelijah.product;
 
+import com.abiodunelijah.category.Category;
+import com.abiodunelijah.image.Image;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,6 +17,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "products")
 public class Product {
 
     @Id

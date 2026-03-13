@@ -1,6 +1,6 @@
-package com.abiodunelijah.product;
+package com.abiodunelijah.product.entities;
 
-import com.abiodunelijah.category.Category;
+import com.abiodunelijah.category.entities.Category;
 import com.abiodunelijah.image.Image;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

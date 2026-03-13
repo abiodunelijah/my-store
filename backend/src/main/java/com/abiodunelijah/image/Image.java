@@ -1,6 +1,6 @@
 package com.abiodunelijah.image;
 
-import com.abiodunelijah.product.Product;
+import com.abiodunelijah.product.entities.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

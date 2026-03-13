@@ -1,7 +1,7 @@
-package com.abiodunelijah.cart;
+package com.abiodunelijah.cart.entities;
 
 
-import com.abiodunelijah.product.Product;
+import com.abiodunelijah.product.entities.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

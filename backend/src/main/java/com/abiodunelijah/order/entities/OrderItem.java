@@ -1,6 +1,6 @@
-package com.abiodunelijah.order;
+package com.abiodunelijah.order.entities;
 
-import com.abiodunelijah.product.Product;
+import com.abiodunelijah.product.entities.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
 package com.abiodunelijah.users;
 
-import com.abiodunelijah.cart.Cart;
-import com.abiodunelijah.order.Order;
+import com.abiodunelijah.cart.entities.Cart;
+import com.abiodunelijah.order.entities.Order;
 import com.abiodunelijah.role.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -43,7 +43,7 @@ public class User {
             {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns =@JoinColumn(name = "role_id", referencedColumnName = "id"))
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles = new HashSet<>();
 
 }

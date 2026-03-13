@@ -2,7 +2,6 @@ package com.abiodunelijah.category.entities;
 
 import com.abiodunelijah.product.entities.Product;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +11,6 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "categories")
 public class Category {
@@ -24,4 +22,8 @@ public class Category {
 
     @OneToMany(mappedBy = "category")
     private List<Product> products;
+
+    public Category(String name) {
+        this.name = name;
+    }
 }

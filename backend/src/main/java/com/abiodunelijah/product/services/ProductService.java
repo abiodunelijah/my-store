@@ -1,18 +1,19 @@
 package com.abiodunelijah.product.services;
 
+import com.abiodunelijah.product.dtos.AddProductRequest;
+import com.abiodunelijah.product.dtos.UpdateProductRequest;
 import com.abiodunelijah.product.entities.Product;
 
 import java.util.List;
 
 public interface ProductService {
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest request);
 
-    Product updateProduct(Product product, Long productId);
+    Product updateProduct(UpdateProductRequest request, Long productId);
 
     Product getProductById(Long productId);
 
     void deleteProductById(Long productId);
-
 
     List<Product> getAllProducts();
 

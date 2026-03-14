@@ -102,6 +102,12 @@ public class ProductServiceImpl implements ProductService {
                 orderItem.setProduct(null);
                 orderItemRepository.save(orderItem);
             });
+
+            Optional.ofNullable(product.getCategory()).ifPresent(category -> category.getProducts().remove(product));
+            product.setCategory(null);
+            productRepository.deleteById(product.getId());
+        }, () -> {
+            throw new EntityNotFoundException("Product not found");
         });
     }
 

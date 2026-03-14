@@ -1,4 +1,4 @@
-package com.abiodunelijah.image;
+package com.abiodunelijah.image.entities;
 
 import com.abiodunelijah.product.entities.Product;
 import jakarta.persistence.*;

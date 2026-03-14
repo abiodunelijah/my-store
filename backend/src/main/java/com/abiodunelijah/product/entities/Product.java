@@ -1,7 +1,7 @@
 package com.abiodunelijah.product.entities;
 
 import com.abiodunelijah.category.entities.Category;
-import com.abiodunelijah.image.Image;
+import com.abiodunelijah.image.entities.Image;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

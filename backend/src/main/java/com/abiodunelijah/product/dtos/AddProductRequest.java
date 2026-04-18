@@ -1,12 +1,16 @@
 package com.abiodunelijah.product.dtos;
 
 import com.abiodunelijah.category.entities.Category;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class AddProductRequest {
 

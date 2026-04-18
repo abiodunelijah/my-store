@@ -28,4 +28,9 @@ public interface ProductService {
     List<Product> getProductsByName(String name);
 
 
+    List<Product> findDistinctProductsByName();
+
+    List<Product> getProductsByCategoryId(Long categoryId);
+
+    Object getAllDistinctBrands();
 }

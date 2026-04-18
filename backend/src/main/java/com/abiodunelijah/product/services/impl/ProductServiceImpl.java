@@ -15,7 +15,6 @@ import com.abiodunelijah.product.services.ProductService;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,7 +28,6 @@ public class ProductServiceImpl implements ProductService {
     private final CategoryRepository categoryRepository;
     private final CartItemRepository cartItemRepository;
     private final OrderItemRepository orderItemRepository;
-    private final ModelMapper modelMapper;
 
     @Override
     public Product addProduct(AddProductRequest request) {
@@ -140,5 +138,20 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getProductsByName(String name) {
         return productRepository.findByName(name);
+    }
+
+    @Override
+    public List<Product> findDistinctProductsByName() {
+        return List.of();
+    }
+
+    @Override
+    public List<Product> getProductsByCategoryId(Long categoryId) {
+        return List.of();
+    }
+
+    @Override
+    public Object getAllDistinctBrands() {
+        return null;
     }
 }

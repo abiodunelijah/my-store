@@ -17,5 +17,6 @@ public class ProductDto {
     private int inventory;
     private String description;
     private CategoryDto categoryDto;
-    private List<ImageDto> imageDto;
+    private List<ImageDto> images;
+
 }

@@ -1,4 +1,4 @@
-package com.abiodunelijah.users;
+package com.abiodunelijah.users.entities;
 
 import com.abiodunelijah.cart.entities.Cart;
 import com.abiodunelijah.order.entities.Order;

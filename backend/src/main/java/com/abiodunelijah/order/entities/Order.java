@@ -2,7 +2,7 @@ package com.abiodunelijah.order.entities;
 
 
 import com.abiodunelijah.enums.OrderStatus;
-import com.abiodunelijah.users.User;
+import com.abiodunelijah.users.entities.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

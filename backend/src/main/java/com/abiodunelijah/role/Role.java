@@ -1,6 +1,6 @@
 package com.abiodunelijah.role;
 
-import com.abiodunelijah.users.User;
+import com.abiodunelijah.users.entities.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

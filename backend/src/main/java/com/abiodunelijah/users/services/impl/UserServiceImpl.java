@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
                     return userRepository.save(user);
 
-                }).orElseThrow(() -> new EntityExistsException("User with " + request.getEmail() + " already exists."));
+                }).orElseThrow(() -> new EntityExistsException("User with  " + request.getEmail() + "  already exists."));
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.abiodunelijah.cart.repositoties;
+package com.abiodunelijah.cart.repositories;
 
 import com.abiodunelijah.cart.entities.CartItem;
 import org.springframework.data.jpa.repository.JpaRepository;

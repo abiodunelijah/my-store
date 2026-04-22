@@ -2,7 +2,7 @@ package com.abiodunelijah.product.services.impl;
 
 import com.abiodunelijah.cart.entities.Cart;
 import com.abiodunelijah.cart.entities.CartItem;
-import com.abiodunelijah.cart.repositoties.CartItemRepository;
+import com.abiodunelijah.cart.repositories.CartItemRepository;
 import com.abiodunelijah.category.entities.Category;
 import com.abiodunelijah.category.repositories.CategoryRepository;
 import com.abiodunelijah.order.entities.OrderItem;

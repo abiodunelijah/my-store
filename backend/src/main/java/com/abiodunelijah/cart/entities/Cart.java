@@ -38,11 +38,16 @@ public class Cart {
         updateTotalAmount();
     }
 
-    private void updateTotalAmount() {
-
+    public void addItem(CartItem cartItem) {
+        this.items.add(cartItem);
+        cartItem.setCart(this);
+        updateTotalAmount();
     }
 
-    public void addItem(CartItem cartItem) {
-
+    private void updateTotalAmount() {
+        this.totalAmount = this.items.stream()
+                .map(CartItem::getTotalPrice)
+                .filter(price -> price != null)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }

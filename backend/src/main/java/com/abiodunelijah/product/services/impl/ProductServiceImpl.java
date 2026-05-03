@@ -32,7 +32,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product addProduct(AddProductRequest request) {
 
-        if (productExists(request.getName(), request.getBrand())) {
+        if (productExists(request.getBrand(), request.getName())) {
             throw new EntityExistsException(request.getName() + " already exist.");
         }
 

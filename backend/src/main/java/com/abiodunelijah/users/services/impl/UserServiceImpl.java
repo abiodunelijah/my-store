@@ -8,7 +8,6 @@ import com.abiodunelijah.users.services.UserService;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -59,12 +58,12 @@ public class UserServiceImpl implements UserService {
         });
     }
 
-    @Override
-    public User getAuthenticatedUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println("The authenticated user: " + authentication.getName());
-        String email = authentication.getName();
-        return Optional.ofNullable(userRepository.findByEmail(email))
-                .orElseThrow(() -> new EntityNotFoundException("Log in required!"));
-    }
+//    @Override
+//    public User getAuthenticatedUser() {
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        System.out.println("The authenticated user: " + authentication.getName());
+//        String email = authentication.getName();
+//        return Optional.ofNullable(userRepository.findByEmail(email))
+//                .orElseThrow(() -> new EntityNotFoundException("Log in required!"));
+//    }
 }

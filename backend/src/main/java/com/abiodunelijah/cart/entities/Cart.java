@@ -39,9 +39,7 @@ public class Cart {
     }
 
     public void addItem(CartItem cartItem) {
-        this.items.add(cartItem);
-        cartItem.setCart(this);
-        updateTotalAmount();
+
     }
 
     private void updateTotalAmount() {
@@ -49,5 +47,8 @@ public class Cart {
                 .map(CartItem::getTotalPrice)
                 .filter(price -> price != null)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public void clearCart() {
     }
 }

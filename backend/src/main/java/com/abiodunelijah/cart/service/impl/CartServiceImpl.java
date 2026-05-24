@@ -7,7 +7,6 @@ import com.abiodunelijah.cart.service.CartService;
 import com.abiodunelijah.users.entities.User;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -19,8 +18,6 @@ public class CartServiceImpl implements CartService {
 
     private final CartRepository cartRepository;
     private final CartItemRepository cartItemRepository;
-    private final ModelMapper mapper;
-
 
     @Override
     public Cart getCart(Long cartId) {

@@ -24,7 +24,7 @@ public class CartItemServiceImpl implements CartItemService {
     private final CartRepository cartRepository;
 
     @Override
-    public void addItemToCart(Long cartId, Long productId, int quantity) {
+    public CartItem addItemToCart(Long cartId, Long productId, int quantity) {
 
         Cart cart = cartService.getCart(cartId);
         Product product = productService.getProductById(productId);
@@ -44,7 +44,7 @@ public class CartItemServiceImpl implements CartItemService {
         cart.addItem(cartItem);
         cartItemRepository.save(cartItem);
         cartRepository.save(cart);
-
+        return cartItem;
     }
 
     @Override
